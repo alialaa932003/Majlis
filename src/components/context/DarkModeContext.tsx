@@ -20,7 +20,7 @@ const DarkModeContext = createContext<DarkModeContextValue | undefined>(
 	undefined,
 );
 
-const STORAGE_KEY = "sakeena-theme";
+const STORAGE_KEY = "majlis-theme";
 
 function getInitialMode(): ThemeMode {
 	if (typeof window === "undefined") {

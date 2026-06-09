@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 import Spinner from "./Spinner";
-import { cn } from "@/lib/shadcnUtils";
+import { cn } from "@/lib/utils";
 
 const FullPageLoading = ({ className }: { className?: string }) => {
   return createPortal(

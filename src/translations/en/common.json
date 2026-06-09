@@ -7,7 +7,7 @@
     },
     "error": {
         "default": "An error occurred",
-        "description": "Something went wrong. Please try again later."
+        "description": "Something went wrong. Please try again."
     },
     "chat": {
         "title": "Chats",

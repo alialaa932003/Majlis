@@ -1,0 +1,39 @@
+{
+  "title": "Notifications",
+  "empty": {
+    "title": "No notifications yet",
+    "description": "When you get notifications, they'll show up here",
+    "filteredDescription": "You don't have any notifications of this type."
+  },
+  "loading": "Loading notifications...",
+  "error": {
+    "title": "Failed to load notifications",
+    "retry": "Retry"
+  },
+  "markAllRead": "Mark all as read",
+  "viewAll": "View All Notifications",
+  "actions": {
+    "accept": "Accept",
+    "reject": "Decline"
+  },
+  "actionText": {
+    "like": "{{username}} liked your post",
+    "comment": "{{username}} commented on your post",
+    "friend_request": "{{username}} sent you a friend request",
+    "friend_accept": "{{username}} accepted your friend request",
+    "default": "You have a new notification"
+  },
+  "filters": {
+    "all": "All",
+    "like": "Likes",
+    "comment": "Comments",
+    "friend_request": "Friend Requests"
+  },
+  "groups": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This Week",
+    "older": "Older"
+  },
+  "markingRead": "Marking..."
+}

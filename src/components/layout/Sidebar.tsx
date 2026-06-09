@@ -9,6 +9,7 @@ import {
     X,
     MessageSquare,
     Mic,
+    Bell,
 } from "lucide-react";
 import { Button } from "../ui/button";
 import { useLogout } from "@/features/auth/hooks/useLogout";
@@ -16,6 +17,7 @@ import { useLogout } from "@/features/auth/hooks/useLogout";
 const navLinks = [
     { name: "Home Feed", href: "/", icon: Home },
     { name: "Explore", href: "/explore", icon: Compass },
+    { name: "Notifications", href: "/notifications", icon: Bell },
     { name: "Friends", href: "/friends", icon: Users },
     { name: "Chat", href: "/chat", icon: MessageSquare },
     { name: "Voice", href: "/voice", icon: Mic },

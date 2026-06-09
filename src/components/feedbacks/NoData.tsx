@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { FiInbox } from "react-icons/fi";
-import { cn } from "@/lib/shadcnUtils";
+import { cn } from "@/lib/utils";
+import type { ParseKeys } from "i18next";
 
 export interface NoDataProps {
-  messageKey?: TranslationKey;
-  descriptionKey?: TranslationKey;
+  messageKey?: ParseKeys<"common">;
+  descriptionKey?: ParseKeys<"common">;
   icon?: ReactNode;
   className?: string;
   iconClassName?: string;
@@ -14,15 +15,15 @@ export interface NoDataProps {
 }
 
 function NoData({
-  messageKey = "common:noData.default",
-  descriptionKey = "common:noData.description",
+  messageKey = "noData.default",
+  descriptionKey = "noData.description",
   className = "",
   icon = <FiInbox size={50} />,
   iconClassName = "",
   messageClassName = "",
   descriptionClassName = "",
 }: NoDataProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
 
   return (
     <div

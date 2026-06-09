@@ -1,0 +1,39 @@
+{
+  "title": "الإشعارات",
+  "empty": {
+    "title": "لا توجد إشعارات حتى الآن",
+    "description": "عندما تتلقى إشعارات، ستظهر هنا",
+    "filteredDescription": "لا توجد أي إشعارات من هذا النوع."
+  },
+  "loading": "جاري تحميل الإشعارات...",
+  "error": {
+    "title": "فشل تحميل الإشعارات",
+    "retry": "إعادة المحاولة"
+  },
+  "markAllRead": "تحديد الكل كمقروء",
+  "viewAll": "عرض جميع الإشعارات",
+  "actions": {
+    "accept": "قبول",
+    "reject": "رفض"
+  },
+  "actionText": {
+    "like": "أعجب {{username}} بمنشورك",
+    "comment": "علق {{username}} على منشورك",
+    "friend_request": "أرسل لك {{username}} طلب صداقة",
+    "friend_accept": "قبل {{username}} طلب الصداقة الخاص بك",
+    "default": "لديك إشعار جديد"
+  },
+  "filters": {
+    "all": "الكل",
+    "like": "الإعجابات",
+    "comment": "التعليقات",
+    "friend_request": "طلبات الصداقة"
+  },
+  "groups": {
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "thisWeek": "هذا الأسبوع",
+    "older": "أقدم"
+  },
+  "markingRead": "جاري التحديد..."
+}

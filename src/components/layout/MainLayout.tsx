@@ -31,7 +31,7 @@ export function MainLayout() {
             <div className="flex flex-1 flex-col min-w-0 overflow-hidden">
                 <Navbar onMenuClick={() => setIsSidebarOpen(true)} />
                 
-                <main className="flex-1 overflow-y-auto p-6">
+                <main id="main-scroll-container" className="flex-1 overflow-y-auto p-6">
                     <Outlet />
                 </main>
             </div>

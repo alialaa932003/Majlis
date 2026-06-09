@@ -1,5 +1,5 @@
 import { t } from "i18next";
-import { BACKEND_BASE_URL } from "@/constants/backendAPIsConfig";
+import { API_BASE_URL } from "@/constants/backendAPIsConfig";
 import { DEFAULT_LOCALE } from "@/constants/i18nConfig";
 import { clearStoredToken, getStoredToken } from "@/features/auth/utils/authStorage";
 
@@ -25,14 +25,19 @@ export async function customFetch<T>(
         ...(options.headers || {}),
     };
 
-    const response = await fetch(`${BACKEND_BASE_URL}${endpoint}`, {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
         ...options,
         method: options.method || "GET",
         headers,
     });
 
     if (!response.ok) {
-        let errorBody: any = {};
+        interface CustomErrorBody {
+            message?: string;
+            data?: unknown;
+        }
+
+        let errorBody: CustomErrorBody;
 
         try {
             errorBody = await response.json();
@@ -45,7 +50,7 @@ export async function customFetch<T>(
         }
 
         throw {
-            message: errorBody.message || t("an-error-occurred" as any),
+            message: errorBody.message || t("common:error.default"),
             errorBody: errorBody.data || null,
             status: response.status,
         };

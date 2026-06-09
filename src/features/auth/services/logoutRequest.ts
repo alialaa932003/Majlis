@@ -3,7 +3,7 @@ import type { JSendSuccess } from "../types/auth";
 
 export async function logoutRequest() {
     const response = await customFetch<JSendSuccess<{ message: string }>>(
-        "/api/auth/logout",
+        "/auth/logout",
         {
             method: "POST",
         },

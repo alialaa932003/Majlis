@@ -1,4 +1,4 @@
-import { cn } from "@/lib/shadcnUtils";
+import { cn } from "@/lib/utils";
 
 const Spinner = ({ className = "" }) => {
   return (
