@@ -10,6 +10,6 @@ export const getNotifications = (params?: NotificationsRequestParams) => {
 
   const queryString = query.toString();
   return customFetch<NotificationsResponse>(
-    `/notifications${queryString ? `?${queryString}` : ""}`,
+    `/api/notifications${queryString ? `?${queryString}` : ""}`,
   );
 };

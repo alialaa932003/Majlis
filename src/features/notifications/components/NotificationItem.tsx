@@ -47,9 +47,9 @@ const NotificationItem = ({ notification, onClick }: NotificationItemProps) => {
       className={cn(
         "flex cursor-pointer items-start gap-3 rounded-lg border px-4 py-3 text-start transition-all select-none focus:outline-none",
         "border-neutral-100 bg-white hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800/50",
-        notification.isRead
-          ? "border-s-transparent"
-          : "border-s-2 border-s-emerald-500 bg-emerald-50/30 dark:bg-emerald-950/20",
+        !notification.isRead
+          ? "border-s-2 border-s-emerald-500 bg-emerald-50/30 dark:bg-emerald-950/20"
+          : "border-s-transparent",
       )}
     >
       {notification.sender ? (
@@ -69,7 +69,7 @@ const NotificationItem = ({ notification, onClick }: NotificationItemProps) => {
           {notification.sender ? (
             <>
               <span className="font-normal text-neutral-500 dark:text-neutral-400">
-                {t(`actionText.${notification.type}`, {
+                {t(`actionText.${notification.type}` as any, {
                   username: notification.sender.username,
                 })}
               </span>

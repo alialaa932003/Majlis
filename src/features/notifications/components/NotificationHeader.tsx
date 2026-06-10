@@ -17,7 +17,7 @@ export const NotificationHeader = () => {
   const handleTestTrigger = async () => {
     try {
       setIsTesting(true);
-      await customFetch.post("/notifications/test");
+      await customFetch("/api/notifications/test", { method: "POST" });
       toast.success("Test notifications triggered successfully!");
     } catch (error) {
       toast.error("Failed to trigger test notifications");

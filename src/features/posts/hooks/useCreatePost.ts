@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createPost } from "../services/createPost";
-import { POSTS_QUERY_KEYS } from "../constants/posts-query-keys";
+import { QUERY_KEYS } from "@/constants/queryKeys";
 
 export function useCreatePost() {
 	const queryClient = useQueryClient();
@@ -9,7 +9,7 @@ export function useCreatePost() {
 		mutationFn: createPost,
 		onSuccess: () => {
 			queryClient.invalidateQueries({
-				queryKey: [POSTS_QUERY_KEYS.POSTS],
+				queryKey: QUERY_KEYS.posts.all(),
 			});
 		},
 	});

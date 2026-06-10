@@ -7,7 +7,7 @@ import type {
 
 export async function registerRequest(payload: RegisterRequest) {
     const response = await customFetch<JSendSuccess<AuthPayload>>(
-        "/auth/register",
+        "/api/auth/register",
         {
             method: "POST",
             body: JSON.stringify(payload),
